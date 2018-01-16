@@ -25,23 +25,23 @@ public class HtmlCoinMainNetParams extends AbstractBitcoinNetParams {
         addressHeader = 41; // chainparams.cpp, line 173
         p2shHeader = 100;
         acceptableAddressCodes = new int[] { addressHeader, p2shHeader };
-        port = 8333;
+        port = 4888;
         packetMagic = 0xf9beb4d9L;
-        bip32HeaderPub = 0x0488B21E; //The 4 byte header that serializes in base58 to "xpub".
-        bip32HeaderPriv = 0x0488ADE4; //The 4 byte header that serializes in base58 to "xprv"
+        bip32HeaderPub = 0x1397C10D; //The 4 byte header that serializes in base58 to "xpub".
+        bip32HeaderPriv = 0x1397BCF3; //The 4 byte header that serializes in base58 to "xprv"
 
         majorityEnforceBlockUpgrade = MAINNET_MAJORITY_ENFORCE_BLOCK_UPGRADE;
         majorityRejectBlockOutdated = MAINNET_MAJORITY_REJECT_BLOCK_OUTDATED;
         majorityWindow = MAINNET_MAJORITY_WINDOW;
 
-        genesisBlock.setDifficultyTarget(0x1d00ffffL);
-        genesisBlock.setTime(1231006505L);
-        genesisBlock.setNonce(2083236893);
-        id = ID_QTUM_MAINNET;
-        subsidyDecreaseBlockCount = 210000;
+        genesisBlock.setDifficultyTarget(0x1f00ffffL);
+        genesisBlock.setTime(1506211200L);
+        genesisBlock.setNonce(94371);
+        id = ID_HTML_MAINNET;
+        subsidyDecreaseBlockCount = 210000; // TODO:
         spendableCoinbaseDepth = 100;
         String genesisHash = genesisBlock.getHashAsString();
-        checkState(genesisHash.equals("000000000019d6689c085ae165831e934ff763ae46a2a6c172b3f1b60a8ce26f"),
+        checkState(genesisHash.equals("0000bf23c6424c270a24a17a3db723361c349e0f966d7b55a6bca4bfb2d951b0"),
                 genesisHash);
 
         // This contains (at a minimum) the blocks which are not BIP30 compliant. BIP30 changed how duplicate
