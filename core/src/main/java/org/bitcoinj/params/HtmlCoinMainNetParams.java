@@ -18,15 +18,15 @@ public class HtmlCoinMainNetParams extends AbstractBitcoinNetParams {
 
     public HtmlCoinMainNetParams() {
         super();
-        interval = INTERVAL;
-        targetTimespan = TARGET_TIMESPAN;
+        interval = INTERVAL; //TODO
+        targetTimespan = TARGET_TIMESPAN; //TODO
         maxTarget = Utils.decodeCompactBits(0x1d00ffffL);
         dumpedPrivateKeyHeader = 169;
         addressHeader = 41; // chainparams.cpp, line 173
         p2shHeader = 100;
         acceptableAddressCodes = new int[] { addressHeader, p2shHeader };
         port = 4888;
-        packetMagic = 0xf9beb4d9L;
+        packetMagic = 0xf9beb4d9L; //TODO
         bip32HeaderPub = 0x1397C10D; //The 4 byte header that serializes in base58 to "xpub".
         bip32HeaderPriv = 0x1397BCF3; //The 4 byte header that serializes in base58 to "xprv"
 
@@ -39,7 +39,7 @@ public class HtmlCoinMainNetParams extends AbstractBitcoinNetParams {
         genesisBlock.setNonce(94371);
         id = ID_HTML_MAINNET;
         subsidyDecreaseBlockCount = 210000; // TODO:
-        spendableCoinbaseDepth = 100;
+        spendableCoinbaseDepth = 100; //TODO
         String genesisHash = genesisBlock.getHashAsString();
         checkState(genesisHash.equals("0000bf23c6424c270a24a17a3db723361c349e0f966d7b55a6bca4bfb2d951b0"),
                 genesisHash);
@@ -55,6 +55,8 @@ public class HtmlCoinMainNetParams extends AbstractBitcoinNetParams {
                 "seed1.htmlcoin.com",
                 "seed2.htmlcoin.com"
         };
+
+        //TODO
         httpSeeds = new HttpDiscovery.Details[] {
                 // Andreas Schildbach
                 new HttpDiscovery.Details(
@@ -63,6 +65,7 @@ public class HtmlCoinMainNetParams extends AbstractBitcoinNetParams {
                 )
         };
 
+        //TODO
         addrSeeds = new int[] {
                 0x1ddb1032, 0x6242ce40, 0x52d6a445, 0x2dd7a445, 0x8a53cd47, 0x73263750, 0xda23c257, 0xecd4ed57,
                 0x0a40ec59, 0x75dce160, 0x7df76791, 0x89370bad, 0xa4f214ad, 0x767700ae, 0x638b0418, 0x868a1018,
