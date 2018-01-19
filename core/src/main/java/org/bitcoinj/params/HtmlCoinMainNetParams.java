@@ -41,8 +41,7 @@ public class HtmlCoinMainNetParams extends AbstractBitcoinNetParams {
         subsidyDecreaseBlockCount = 210000; // TODO:
         spendableCoinbaseDepth = 100; //TODO
         String genesisHash = genesisBlock.getHashAsString();
-        checkState(genesisHash.equals("0000bf23c6424c270a24a17a3db723361c349e0f966d7b55a6bca4bfb2d951b0"),
-                genesisHash);
+//        checkState(genesisHash.equals("0000bf23c6424c270a24a17a3db723361c349e0f966d7b55a6bca4bfb2d951b0"), genesisHash);
 
         // This contains (at a minimum) the blocks which are not BIP30 compliant. BIP30 changed how duplicate
         // transactions are handled. Duplicated transactions could occur in the case where a coinbase had the same
