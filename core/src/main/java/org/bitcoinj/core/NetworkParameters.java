@@ -73,6 +73,7 @@ public abstract class NetworkParameters {
 
     /** The string returned by getId() for the Html mainnet. */
     public static final String ID_HTML_TESTNET = "org.bitcoinj.html_testnet";
+    public static final String ID_HTML_REGTEST = "org.bitcoinj.html_regtest";
 
     /** The string used by the payment protocol to represent the main net. */
     public static final String PAYMENT_PROTOCOL_ID_MAINNET = "main";
@@ -248,7 +249,9 @@ public abstract class NetworkParameters {
             return HtmlCoinMainNetParams.get();
         } else if (id.equals(ID_HTML_TESTNET)) {
             return HtmlCoinTestNetParams.get();
-		}else{
+		} else if (id.equals(ID_HTML_REGTEST)) {
+            return HtmlCoinRegTestParams.get();
+        } else{
             return null;
         }
     }

@@ -35,11 +35,13 @@ public class HtmlCoinRegTestParams extends AbstractBitcoinNetParams {
         genesisBlock.setDifficultyTarget(0x207fffffL);
         genesisBlock.setTime(1506213200L);
         genesisBlock.setNonce(2);
-        id = "org.bitcoinj.html_testnet";
+        id = ID_HTML_REGTEST;
         subsidyDecreaseBlockCount = 210000;
         spendableCoinbaseDepth = 100;
         String genesisHash = genesisBlock.getHashAsString();
 //        checkState(genesisHash.equals("000013694772f8aeb88efeb2829fe5d71fbca3e23d5043baa770726f204f528c"), genesisHash);
+
+        checkpoints.put(0, Sha256Hash.wrap("000013694772f8aeb88efeb2829fe5d71fbca3e23d5043baa770726f204f528c"));
 
         dnsSeeds = new String[] {
         };
